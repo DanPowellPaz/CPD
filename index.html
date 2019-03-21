@@ -11,11 +11,14 @@
 <body style="margin: 0px; overflow: hidden;">
 	<!-- stats - gives stats on performance (can remove) -->
 	<!-- arjs - define basic ARjs configuration -->
-	<a-scene stats embedded arjs='trackingMethod: best; debugUIEnabled: false'>#
+	<a-scene stats embedded arjs='trackingMethod: best; debugUIEnabled: false'>
 
 		<a-marker preset="hiro">
 
-			<a-box position="0 1 0" material="color: blue;" rotation="0 0 0"></a-box>
+			<a-box position="0 1 0" material="color: blue;" animation="property: position; to: 5 1.6 0; dur: 1500; easing: linear">
+				<!-- <a-animation attribute="rotation" dur="2000" from="0 0 0" to="360 0 0" repeat="indefinite"></a-animation> -->
+			</a-box>
+			
 
 		</a-marker>
 
@@ -24,7 +27,7 @@
 			<!-- <a-animation attribute="position" dur="1000" from="1 0 0" to="0 0 1"></a-animation> -->
 			<!-- <a-animation attribute="rotation" dur="2000" from="0 0 0" to="360 0 0" repeat="indefinite"></a-animation> -->
 			<!-- <a-animation attribute="scale" to="2 2 3"></a-animation> -->
-			<a-animation attribute="color" to="red"></a-animation>
+			<!-- <a-animation begin="3000" attribute="color" to="red"></a-animation> -->
 
 		</a-entity>
 
